@@ -62,19 +62,23 @@ configure tailwindcss in project
    @tailwind components;
    @tailwind utilities;
 
-  ```` if you want use tailwind run command  ````
-   ```ruby npx tailwindcss -i src/main/resources/static/css/input.css -o 
-    src/main/resources/static/css/output.css --watch ```
+  ``` if you want use tailwind run command  ```
+   ```ruby
+    npx tailwindcss -i src/main/resources/static/css/input.css -o 
+    src/main/resources/static/css/output.css --watch
+   ```
 
-    add css script to home.html file in head session    
-      ```ruby  <link rel="stylesheet" th:href="@{'/css/output.css'}" /> ```
+  ```  add css script to home.html file in head session ``` 
+      ```ruby
+       <link rel="stylesheet" th:href="@{'/css/output.css'}" /> 
+      ```
         
  ```` if you want use flowbite and use their component then ````
   in head tag 
-  <link 
- ``` ruby href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  ``` ruby 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 ```
- ```` before body tag ````
+ ``` before body tag ```
   ``` ruby 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   ```
