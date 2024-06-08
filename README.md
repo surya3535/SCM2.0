@@ -98,25 +98,71 @@ and before body tag
 use thymleaf fragment for repeated contain add different page.
 we insert and replace fragment in pages.
 fragment just like function
-
 ````
-
-create fragment
+ ````
+ create fragment with receive dynamic value
+ ````
+```
 <div th:fragment="parent(x)">
 <h1 th:text="${x}"></h1>
 </div>
-
-call  fragment
+```
+````
+call  fragment inside the page
+````
+```
 <div th:insert="~{basef :: parent('one')}"></div>
+```
 
-fragment recive HTML
-<div th:fragment="parent(content)">
-<div th:replace="${content}"></div>
+````
+fragment receive HTML
+````
+```
+ <div th:fragment="parent(content)">
+ <div th:replace="${content}"></div>
+ </div>
+```
+
+````
+call fragment inside the page with send html
+````
+
+```
+<div th:replace="~{basef :: parent(~{::p})}">
+<p>send data</p>
 </div>
+```
 
-call fragment
-<div th:replace="~{basef :: parent(~{::p})}"></div>
- 
+````
+depend upoun the dynamic value of spring-boot data  call fragment
+````
+```
+<div class="demo-page" th:replace="${isAdminActive} ? ~{pfragment :: parent(~{::h2})} : ~{pfragment :: child(~{::h3})}" >
+
+```
+
+````
+create fragment
+````
+```
+th:fragment="parent(x)"
+```
+````
+recieve text,HTML content,link from fragment 
+````
+```
+th:text="${x}
+th:replace="${x}
+th:herf="@{`/home`}
+```
+````
+send HTML data,text to fragment
+````
+``` 
+th:replace="~{basef :: parent(~{::p})}
+th:replace="~{basef :: parent('hello')}
+```
+
 
 
 
