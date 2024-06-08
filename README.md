@@ -37,4 +37,49 @@ technology used
 13. flowbite components -for readymade components
 14. pdf/excel tools for generating reports
 
+required dependencies
+1. web
+2. Lombok
+3. devtool
+4. thymleaf
+5. data jpa
+6. PostgreSQL driver
+7. validation
+8. security
+9. oauth2-client
+10. model mapper
+11. stater mail
+
+
+configure tailwindcss in project
+11npm init -y
+2.npm install -D tailwindcss
+   in package.json add  "type": "module",
+3.npx tailwindcss init
+   in tailwindcss.config file add   content: ["./src/**/*.{html,js}"]
+   create file this location index.css /* ./src/main/resource/static/css  */
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+
+  **if you want use tailwind run command 
+    npx tailwindcss -i src/main/resources/static/css/input.css -o 
+    src/main/resources/static/css/output.css --watch
+
+    add css script to home.html file in head session    
+        <link rel="stylesheet" th:href="@{'/css/output.css'}" />
+        
+ ** if you want use flowbite and use their component then
+  in head tag 
+  <link 
+ ``` ruby href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+```
+  before body tag
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+
+
+    
+
+
 
