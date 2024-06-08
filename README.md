@@ -80,7 +80,14 @@ smart contact management(SCM2.0) to lern various thing in this project
  ```
  <link rel="stylesheet" th:href="@{'/css/output.css'}" /> 
  ```
-        
+
+````
+namespace
+````
+```
+  xmlns:th="http://www.thymeleaf.org"
+```
+   
 ````
  if you want use flowbite and use their component then paste link in
  in head tag
@@ -148,19 +155,21 @@ create fragment
 th:fragment="parent(x)"
 ```
 ````
-recieve text,HTML content,link from fragment 
+recieve text,HTML content,link,file from fragment 
 ````
 ```
 th:text="${x}
 th:replace="${x}
 th:herf="@{`/home`}
+th:src="@{`/home/js/logo.png`}
 ```
 ````
-send HTML data,text to fragment
+send HTML data,text only call without pass data to fragment
 ````
 ``` 
 th:replace="~{basef :: parent(~{::p})}
 th:replace="~{basef :: parent('hello')}
+th:replace="basef :: parent"
 ```
 
 
