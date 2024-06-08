@@ -56,12 +56,13 @@ configure tailwindcss in project
 2.npm install -D tailwindcss
    in package.json add  "type": "module",
 3.npx tailwindcss init
+```
    in tailwindcss.config file add   content: ["./src/**/*.{html,js}"]
    create file this location index.css /* ./src/main/resource/static/css  */
    @tailwind base;
    @tailwind components;
    @tailwind utilities;
-
+```
   ``` if you want use tailwind run command  ```
    ```ruby
     npx tailwindcss -i src/main/resources/static/css/input.css -o 
