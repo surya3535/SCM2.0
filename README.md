@@ -1,7 +1,7 @@
 # SCM2.0
 smart contact management(SCM2.0) to lern various thing in this project
 
-feature of SCM2.0
+```` feature of SCM2.0 ````
 1. user signup with an email and password.
 2. verify account using email verification link or  otp.
 3. signup with google, github using OAuth2 etc
@@ -21,7 +21,7 @@ feature of SCM2.0
 17. dark and light theme
 18. provide feedback
 
-technology used
+```` technology used ````
 1. latest version spring boot.
 2. Spring MVC.
 3. Spring data JPA
@@ -37,7 +37,7 @@ technology used
 13. flowbite components -for readymade components
 14. pdf/excel tools for generating reports
 
-required dependencies
+```` required dependencies ````
 1. web
 2. Lombok
 3. devtool
@@ -51,37 +51,50 @@ required dependencies
 11. stater mail
 
 
-configure tailwindcss in project
-11npm init -y
-2.npm install -D tailwindcss
+```` configure tailwindcss in project ````
+1. npm init -y
+2. npm install -D tailwindcss
    in package.json add  "type": "module",
-3.npx tailwindcss init
-```
+3. npx tailwindcss init
    in tailwindcss.config file add   content: ["./src/**/*.{html,js}"]
-   create file this location index.css /* ./src/main/resource/static/css  */
+   create file this location input.css in this location /* ./src/main/resource/static/css  */
+   and add
+   ```
    @tailwind base;
    @tailwind components;
    @tailwind utilities;
-```
-  ``` if you want use tailwind run command  ```
-   ```ruby
+  ```
+
+ ````
+ if you want use tailwind then run this command
+ ````
+
+  ```
     npx tailwindcss -i src/main/resources/static/css/input.css -o 
     src/main/resources/static/css/output.css --watch
-   ```
+  ```
 
-  ```  add css script to home.html file in head session ``` 
-      ```ruby
-       <link rel="stylesheet" th:href="@{'/css/output.css'}" /> 
-      ```
+ ````
+add css script to home.html file in head session
+```` 
+ ```
+ <link rel="stylesheet" th:href="@{'/css/output.css'}" /> 
+ ```
         
- ```` if you want use flowbite and use their component then ````
-  in head tag 
-  ``` ruby 
+````
+ if you want use flowbite and use their component then 
+````
+````
+in head tag
+````
+ ```
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-```
- ``` before body tag ```
-  ``` ruby 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+ ```
+````
+ before body tag 
+````
+  ```
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   ```
 
 
