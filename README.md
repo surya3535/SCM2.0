@@ -74,28 +74,50 @@ smart contact management(SCM2.0) to lern various thing in this project
     src/main/resources/static/css/output.css --watch
   ```
 
- ````
-add css script to home.html file in head session
+````
+ if we wnat tailwind css then paste in html head session
 ```` 
  ```
  <link rel="stylesheet" th:href="@{'/css/output.css'}" /> 
  ```
         
 ````
- if you want use flowbite and use their component then 
-````
-````
-in head tag
+ if you want use flowbite and use their component then paste link in
+ in head tag
 ````
  ```
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
  ```
 ````
- before body tag 
+and before body tag 
 ````
   ```
    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   ```
+````
+use thymleaf fragment for repeated contain add different page.
+we insert and replace fragment in pages.
+fragment just like function
+
+````
+
+create fragment
+<div th:fragment="parent(x)">
+<h1 th:text="${x}"></h1>
+</div>
+
+call  fragment
+<div th:insert="~{basef :: parent('one')}"></div>
+
+fragment recive HTML
+<div th:fragment="parent(content)">
+<div th:replace="${content}"></div>
+</div>
+
+call fragment
+<div th:replace="~{basef :: parent(~{::p})}"></div>
+ 
+
 
 
 
